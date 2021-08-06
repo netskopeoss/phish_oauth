@@ -19,7 +19,7 @@
 # OAuth Flows
 
 ## Device Authorization Grant (device code flow)
-<img src="device_code_flow.png" alt="Device Authorization Grant"> 
+<img src="oauth_device_code.png" alt="Device Authorization Grant"> 
 
 
 # References
