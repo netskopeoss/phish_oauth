@@ -10,9 +10,26 @@
     is written in generic Powershell and can be run on any supported platform. Most cmdlet
     calls are simple REST API calls and should be translateable to any language.
 
-# Running the Demo
-    1. [Install Powershell](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7.1)
-    2. 
+# Running the Code
+1. [Install Powershell](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7.1)
+2. Setup Microsoft Environment
+    - Within Azure AD, create user account
+    - Enable Office 365 and ensure user has access to Outlook
+    - Ensure user has read access to an Azure subscription and resources
+3. Configure demo_cfg.json
+    - Set SMTP settings if you want to have the demo code send an email phish
+    - Keep other config settings as is (page=true, interactive=true, verbose=1, etc.)
+4. Run
+    - command-line: `Powershell.exe|pwsh demo_msft.ps1 -config demo_cfg.json`
+    - Step #0: user and device codes generated
+    - Step #1: phish email sent (to user/victim set in demo_cfg.json)
+    - Step #2: will loop waiting for user/victim to authenticate/authorize
+    - In browser, <log in as user/victim to login.microsoft.com, check Outlook, follow phishing email link, authenticate)
+    - Step #3: retrieve user''s oauth access tokens
+    - Step #4: use access token to list users in Azure AD
+    - Step #5: retrieve user''s email
+    - Step #6: move laterally and use refresh token to get new access token for Azure
+    - Step #7: will list resources within Azure subscriptions that the user/victim has access to
 
 # Directories / Files
     device_code/pwsh/
