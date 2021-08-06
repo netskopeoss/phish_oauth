@@ -1,0 +1,20 @@
+{
+    "interactive": true,
+    "page": true,
+    "verbose": 1,
+    "send_email": false,
+    "email": {
+        "subject": "Thank you from the Microsoft Outlook 365 Team!",
+        "from": "Outlook 365 Product Team <noreply@azure365-microsoft.com>",
+        "to": [ "VICTIM@DOMAIN.com" ],
+        "body": "demo_email.txt",
+        "body_html": true,
+        "verification_uri": "https://microsoft.com/devicelogin"
+    },
+    "smtp": {
+        "server": "_SMTP_SERVER_",
+        "port": 587,
+        "username": "_SMTP_USERNAME_",
+        "password": "_SMTP_PASSWD_"
+    }
+}
