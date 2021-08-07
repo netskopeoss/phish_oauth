@@ -14,22 +14,23 @@
 1. [Install Powershell 7.x](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7.1)
 2. Setup Microsoft Environments (for the victim only)
     - **NOTES:**
-        1. The attacker does not need a Microsoft account or environment, only the victim
-        2. You need administrator privileges to manage user accounts within Azure and Office 365.
-        3. Trial accounts are the easiest way to do test this (creating an O365 account should create the Azure account)
+        1. Victim Environment: The attacker does not need a Microsoft account or environment, only the victim
+        2. **DO NOT** run this in a production environment. An existing Azure+Office365 account can be used, in which case just check that Azure+O365 access woorks for the existing accounts. These instructions are only needed if you want to create a new set of accounts to serve as the victim accounts.
+        3. You need administrator privileges to manage user accounts within Azure and Office 365.
+        4. Trial accounts are the easiest way to do test this (creating an O365 account should create the Azure account)
             - https://www.microsoft.com/en-us/microsoft-365/try
             - https://azure.microsoft.com/en-us/free/
-        4. Then the inital administrator account can be the example victim account. Otherwise, follow steps below to create a separate victim account in an existing Azure AD and Office 365 environment (**DO NOT USE IN A PRODUCTION ACCOUNT**)
-    - Within Azure AD, login as an AD administrator and create victim account
+        5. Then the inital administrator account can be the example victim account. Otherwise, follow steps below to create a separate victim account in an existing Azure AD and Office 365 environment 
+    1. Within Azure AD, login as an AD administrator and create victim account
         1. portal.azure.com > Azure Active Directory > Users
         2. ensure a subscription exists and some example resources exist that the user can access
-    - Ensure the victim has read access to an Azure subscription and resources
+    2. Ensure the victim has read access to an Azure subscription and resources
         1. log into portal.azure.com as the victim, Search on subscriptions, should see at least 1
         2. search on All Resources, make sure at least one resource exists
         3. create some additional resources if you wish
-    - Within the Office 365, login as the administrator and check that a license of Office 365 is associated with the victim
+    3. Within the Office 365, login as the administrator and check that a license of Office 365 is associated with the victim
         1. login.onmicrosoft.com > Admin icon > Users > Active Users
-    - Ensure the Office 365 Outlook email works for the victim
+    4. Ensure the Office 365 Outlook email works for the victim
         1. login.onmicrosoft.com as the victim account > Outlook icon
 3. Configure demo_cfg.json
     - Set victim user email address in the "to" propery
