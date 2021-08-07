@@ -12,11 +12,11 @@
 
 # Running the Code
 1. [Install Powershell](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7.1)
-2. Setup Microsoft Environment (for an exxample victim)
+2. Setup Microsoft Environment (for the victim)
     - Within Azure AD, create user account
     - Enable Office 365 and ensure user has access to Outlook
     - Ensure user has read access to an Azure subscription and resources
-    NOTE: the attacker does not need a Microsoft account or environment
+    - **NOTE: the attacker does not need a Microsoft account or environment**
 3. Configure demo_cfg.json
     - Set SMTP settings if you want to have the demo code send an email phish
     - Keep other config settings as is (page=true, interactive=true, verbose=1, etc.)
