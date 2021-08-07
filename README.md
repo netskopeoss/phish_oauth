@@ -11,7 +11,7 @@
     calls are simple REST API calls and should be translateable to any language.
 
 # Running the Code
-1. [Install Powershell](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7.1)
+1. [Install Powershell 7.x](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7.1)
 2. Setup Microsoft Environment (for the victim)
     - Within Azure AD, create user account
     - Enable Office 365 and ensure user has access to Outlook
